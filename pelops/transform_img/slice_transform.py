@@ -16,7 +16,7 @@ def transform_1(input_image):
 def transform_2(input_image):
     """Original image size, 0 bg, Anchor centered"""
     in_img = input_image.copy()
-    out_img = PIL.Image.new('RGB', (244, 244), color=0)
+    out_img = PIL.Image.new('RGB', (224, 224), color=0)
     anchor_x = 112 - int(in_img.size[0] / 2)
     anchor_y = 112 - int(in_img.size[1] / 2)
     out_img.paste(in_img, (anchor_x, anchor_y))
